@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh"content="5;url=1.html"/> -->
+    <title>Test</title>
+    <!--Thinking Analytics SDK BEGIN-->
+    <script>
+        !function (e) { if (!window.ThinkingDataAnalyticalTool) { var n = e.sdkUrl, t = e.name, r = window, a = document, i = "script", l = null, s = null; r.ThinkingDataAnalyticalTool = t; var o = ["track", "quick", "login", "identify", "logout", "trackLink", "userSet", "userSetOnce", "userAdd", "userDel", "setPageProperty", "setSuperProperties", "setDynamicSuperProperties", "clearSuperProperties", "timeEvent", "unsetSuperProperties", "initInstance"]; r[t] = function (e) { return function () { if (this.name) (r[t]._q = r[t]._q || []).push([e, arguments, this.name]); else if ("initInstance" === e) { var n = arguments[0]; r[t][n] = { name: n }; for (var a = 0; a < o.length; a++)r[t][n][o[a]] = r[t].call(r[t][n], o[a]); (r[t]._q1 = r[t]._q1 || []).push([e, arguments]) } else (r[t]._q = r[t]._q || []).push([e, arguments]) } }; for (var u = 0; u < o.length; u++)r[t][o[u]] = r[t].call(null, o[u]); r[t].param = e, r[t].__SV = 1.1, l = a.createElement(i), s = a.getElementsByTagName(i)[0], l.async = 1, l.src = n, s.parentNode.insertBefore(l, s) } }(
+            {
+
+                appId: "22e445595b0f42bd8c5fe35bc44b88d6",
+                name: "ta",
+                //  send_method:"ajax",
+                sdkUrl: "./thinkingdata.min.js",
+                serverUrl: "127.0.0.1:8001/sync_js",
+                loaded: function (ta) {
+                    console.log('XXXX');
+                    ta.track(
+                        'test',
+                        {
+                            'prop': 100
+                        }
+                    );
+
+                },
+                //  send_method: 'ajax'
+            });
+
+    </script>
+    <!--Thinking Analytics SDK END-->
+</head>
+
+<body>
+    <p>Enjoy this page for a second, because you won't be coming back here.</p>
+    <button onclick="sendTestData()">Send Test Data</button>
+    <!-- <a href="night://lolita?name=Tomcat&page=27">open app</a><br/> -->
+    <script>
+        
+        function sendTestData() {
+            //     ta.setSuperProperties({"super1":1,"super2":100});
+            // ta.optOutTracking();
+            // ta.enableTracking(true);
+
+            //     // ta.identify('123');
+            //     // ta.login('ta-001');
+            //     // console.log("distinctId=" + ta.getDistinctId());
+            //     // console.log("deviceId=" + ta.getDeviceId());
+            //     ta.enableTracking(true);
+            //     ta.optInTracking();
+            //     // ta.identify('123');
+            //     // ta.setSuperProperties({"super3":100});
+            // //    console.log(ta.getSuperProperties());
+            // //    console.log("distinctId=" + ta.getDistinctId());
+            // //    console.log(ta.getPresetProperties());
+            // //    console.log(ta.getPresetProperties().toEventPresetProperties());
+            //   console.log(new Date());
+            // ta.setSuperProperties({"c":100,"d":"XXX"});
+            //     ta.track(
+            //         'test',
+            //     );
+            // window.location = '1.html';
+            // window.localStorage.ta = windo
+            // localStorage.setItem("ta",JSON.stringify(ta));
+        }
+    </script>
+</body>
